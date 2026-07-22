@@ -82,7 +82,7 @@
     async function carregarAnalises() {
       const container = document.getElementById('jogos-container');
       try {
-        const resposta = await fetch('dados_jogos_hoje.json?v=' + new Date().getTime());
+        const resposta = await fetch('./dados_jogos_hoje.json?v=' + new Date().getTime());
         if (!resposta.ok) throw new Error('Arquivo de análises ainda não gerado');
         jogosGlobais = await resposta.json();
 
